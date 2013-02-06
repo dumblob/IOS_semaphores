@@ -1,0 +1,2 @@
+= test 24_sleep
+-15: podezrely pocet volani sleep (5) (*** overit ***)

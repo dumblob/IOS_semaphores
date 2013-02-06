@@ -1,0 +1,278 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+  <title>
+    IOS: Projekt 2
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;">
+<meta name="robots" content="noindex,nofollow">
+<meta name="date" content="2010-02-22T10:23:58+0100">
+<meta name="keywords" content="vyuka,ios,start">
+<!--
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.fit.vutbr.cz/%7Esmrcka/w/lib/exe/opensearch.php" title="AS'wiki">
+<link rel="start" href="https://www.fit.vutbr.cz/%7Esmrcka/w/">
+<link rel="contents" href="https://www.fit.vutbr.cz/%7Esmrcka/w/doku.php?id=vyuka:ios:start&amp;do=index" title="Index">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="https://www.fit.vutbr.cz/%7Esmrcka/w/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="https://www.fit.vutbr.cz/%7Esmrcka/w/feed.php?mode=list&amp;ns=vyuka:ios">
+<link rel="edit" title="Edit this page" href="https://www.fit.vutbr.cz/%7Esmrcka/w/doku.php?id=vyuka:ios:start&amp;do=edit">
+<link rel="alternate" type="text/html" title="Plain HTML" href="https://www.fit.vutbr.cz/%7Esmrcka/w/doku.php?do=export_xhtml&amp;id=vyuka:ios:start">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="https://www.fit.vutbr.cz/%7Esmrcka/w/doku.php?do=export_raw&amp;id=vyuka:ios:start">
+<link rel="canonical" href="https://www.fit.vutbr.cz/%7Esmrcka/w/doku.php?id=vyuka:ios:start">
+-->
+<link rel="stylesheet" media="all" type="text/css" href="doku.php_soubory/css_003.css">
+<link rel="stylesheet" media="screen" type="text/css" href="doku.php_soubory/css_002.css">
+<link rel="stylesheet" media="print" type="text/css" href="doku.php_soubory/css.css">
+<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
+var NS='vyuka:ios';var SIG=' --- //[[smrcka@fit.vutbr.cz|Vyučující IOS]] 22.02.2010 10:23//';var JSINFO = {"id":"vyuka:ios:start","namespace":"vyuka:ios"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="doku.php_soubory/js.php"></script>
+
+  <link rel="shortcut icon" href="https://www.fit.vutbr.cz/%7Esmrcka/w/lib/tpl/default/images/favicon.ico">
+
+  </head><body>
+<div class="dokuwiki">
+    
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<!--
+<div class="toc">
+<div style="cursor: pointer;" class="tocheader toctoggle" id="toc__header"><span class="toc_close" style="cursor: pointer;" id="toc__toggle"><span>-</span></span>Table of Contents</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#ukol" class="toc">2. Úkol</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#common_part" class="toc">Společná část</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#varianta_a" class="toc">Varianta A</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#varianta_b" class="toc">Varianta B</a></span></div></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+-->
+<!-- TOC END -->
+
+
+
+<h1><a name="ukol" id="ukol">2. Projekt 2010/2011</a></h1>
+<div class="level1">
+
+<p>
+<strong> Podmínky vypracování </strong>
+</p>
+
+<ul>
+<li class="level1"><div class="li"> Projekt implementujte v jazyku C.</div>
+</li>
+<li class="level1"><div class="li"> Komentujte zdrojové kódy, programujte přehledně. Součástí hodnocení bude i kvalita zdrojového kódu.</div>
+</li>
+<li class="level1"><div class="li"> Kontrolujte, zda se všechny procesy ukončují korektně a při ukončování správně rušíte všechny alokované zdroje
+(např. pro prostředky System V můžete pomocí příkazu <code>ipcs</code> zjistit, jaké zdroje jsou v systému alokovány).</div>
+</li>
+<li class="level1"><div class="li"> Dodržujte syntax zadaných jmen,
+formátu souborů a formátu výstupních dat! Čtěte pozorně zadání a
+poznámky k vypracování u jednotlivých zadání.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Dotazy k zadání:</strong> Veškeré nejasnosti a dotazy řešte pouze prostřednictvím diskuzního fóra <em>Projekty</em>.</div>
+</li>
+</ul>
+
+<p>
+<strong> Podmínky překladu </strong>
+</p>
+
+<ul>
+<li class="level1"><div class="li"> Pro překlad používejte nástroj <i>make</i>. Součástí odevzdání bude soubor <code>Makefile</code>.</div>
+</li>
+<li class="level1"><div class="li"> Překlad se provede příkazem <code>make</code> v adresáři, kde je umístěn soubor Makefile.</div>
+</li>
+<li class="level1"><div class="li"> Zdrojové kódy překládejte s přepínači <code>-std=gnu99 -Wall -Wextra -Werror -pedantic</code>.</div>
+</li>
+</ul>
+
+<p>
+<strong> Odevzdání </strong>
+</p>
+
+<ul>
+<li class="level1"><div class="li"> Součástí odevzdání budou pouze soubory se zdrojovými kódy (<code>*.c</code>, příp. <code>*.h</code>) a soubor <code>Makefile</code>.
+Tyto soubory zabalte do archivu s názvem xlogin.zip, kde xlogin je váš login.
+</div>
+</li>
+<li class="level1"><div class="li"> Archiv vytvořte tak, aby po rozbalení byl soubor Makefile umístěn ve stejném adresáři jako je archiv. </div>
+</li>
+<li class="level1"><div class="li"> Archiv xlogin.zip odevzdejte prostřednictvím informačního systému, termín <em>Projekt 2</em>.</div>
+</li>
+<li class="level1"><div class="li"> Pokud nebude dodržena forma odevzdání nebo projekt nepůjde přeložit, bude projekt hodnocen 0 body.</div>
+</li>
+</ul>
+
+<p>
+<strong> Opravy zadání </strong>
+<ul>
+<li class="level1"><div class="li"> Opravy zadání (chyby, překlepy, vyjasnění) jsou v textu zvýrazněny červeně.
+</div>
+</li>
+<li class="level1"><div class="li"> První oprava byla provedena 4.4.2011.
+</div>
+</li>
+</ul>
+</p>
+
+</div>
+
+<h2><a name="common_part" id="common_part">Zadání projektu</a></h2>
+<div class="level2">
+
+<p>
+<strong>Cíl:</strong> Implementujte upravenou variantu synchronizačního problému <i>spícího holiče</i>. V holičství je jeden holič a Q židlí v čekárně. Když holič
+ostříhá zákazníka, zkontroluje čekárnu. Pokud zde čeká zákazník, holič ho usadí do svého křesla a ostříhá. Pokud je čekárna prázdná, holič
+se posadí do svého křesla a usne. Zákazník, který přijde, usedne do čekárny. Pokud holič spí, vzbudí ho a nechá se ostříhat, jinak
+čeká, až na něj přijde řada. Pokud je čekárna plná (všechny židle Q jsou obsazeny), zákazník odchází neostříhán.
+</p>
+
+<p>
+Každému zákazníkovi a holiči odpovídá jeden proces. Pro synchronizaci procesů použijte semafory (System V nebo POSIX).
+</p>
+
+<p>
+<strong>Základní proměnné:</strong>
+<pre>
+Q    : počet židlí
+GenC : rozsah pro generování zákazníků [ms]
+GenB : rozsah pro generování doby obsluhy [ms]
+</pre>
+</p>
+
+<p>
+<strong>Implementační detaily:</strong> Po spuštění vytváří hlavní proces jeden podproces pro holiče.
+Hlavní proces čeká na ukončení všech svých potomků a poté se ukončí. <!-- Každý proces holiče bude identifikovatelný podle čísla (1 až B). -->
+Každý zákazník bude idenfikován celým číslem, začínajícím od 1.
+Zákazníci jsou vytvářeni v časových intervalech, které jsou generovány náhodně v rozmezí 0 až GenC v ms.
+Ostříhání zákazníka simulujte uspáním procesu holiče na dobu, která je generována náhodně v rozmezí 0 až GenB v ms. Proces zákazníká čeká, až ho proces
+holiče informuje o dokončení stříhání po svém vzbuzení. Pro proces zákazníka nepoužívejte aktivní čekání ani sleep.
+</p>
+
+<p>
+<strong>Výstupy procesů:</strong>
+Každý zákazník a holič poskytuje informace o právě prováděné akci.
+<br>
+Formát výstupů:
+<ul>
+<li class="level1"><div class="li">holič kontroluje čekárnu, zda je další zákazník: <pre>A: barber: checks</pre></div></li>
+<li class="level1"><div class="li">holič je připraven přijmout zákazníka z čekárny: <pre>A: barber: ready</pre></div></li>
+<li class="level1"><div class="li">holič ostříhal zákazníka: <pre>A: barber: finished</pre></div></li>
+<li class="level1"><div class="li">zákazník je vytvořen: <pre>A: customer C: created</pre></div></li>
+<li class="level1"><div class="li">zákazník vstupuje do čekárny: <pre>A: customer C: enters</pre></div></li>
+<li class="level1"><div class="li">zákazník usedá do křesla holiče; tiskne se až poté, co je holič připraven (barber: ready): <pre>A: customer C: ready</pre></div></li>
+<li class="level1"><div class="li">zákazník odchází ostříhán; tiskne se až poté, co holič dokončil stříhání (barber: finished): <pre>A: customer C: served</pre></div></li>
+<li class="level1"><div class="li">zákazník odchází neobsloužen: <pre>A: customer C: refused</pre></div></li>
+</ul>
+</p>
+
+<p>
+<strong>Popis proměnných ve výstupu:</strong>
+<ul>
+<li class="level1"><div class="li"> <strong>C</strong>: číslo <font color="red"><del>holiče</del> zákazníka</font></div></li>
+<li class="level1"><div class="li"> <strong>A</strong>: pořadové číslo prováděné akce. Akce se číslují od jedničky. Číslo akce je uloženo ve sdílené paměti (C funkce <i>shmXXX</i>), před každou akcí se číslo přečte, použije a zpět zapíše nová hodnota.</div></li>
+</ul>
+</p>
+
+<p>
+<strong>Poznámky k vypracování:</strong>
+<ul>
+<li class="level1"><div class="li"> Po překladu vznikne spustitelný soubor se jménem <i>barbers</i>, který bude umístěn ve stejném adresáři jako soubor Makefile.</div></li>
+<li class="level1"><div class="li"> Při spouštění se zadají celá kladná čísla Q, GenC, GenB a N a řetězec F v tomto pořadí (viz ukázka; význam prvních proměnných viz výše).
+Číslo N vyjadřuje počet celkově vygerenovaných a obsloužených<font color="red"> nebo odmítnutých</font> zákazníků (<font color="red">tj. N procesů zákazníka vznikne a zanikne</font>), po kterých se aplikace ukončí (uvolní se všechny zdroje a ukončí se všechny procesy).
+Řetězec F reprezentuje název souboru, do kterého se budou ukládat generované informace. Pokud se místo názvu uvede znak -, budou se informace vypisovat na standardní výstup.</div></li>
+<li class="level1"><div class="li"> Přístup k souboru (zápis informací) musí být výlučný; pokud zapisuje jeden proces a další chce také zapisovat, musí počkat na uvolnění zdroje. Stejně tak musí být zajištěn výlučný přístup k čítači akcí. </div></li>
+<li class="level1"><div class="li"> Implementujte problém tak, abyste předešli uváznutí (deadlock) a vyhladovění (starvation). </div></li>
+<li class="level1"><div class="li"> Pokud některý se vstupů nebude odpovídat očekávanému formátu, program vytiskne chybové hlášení a ukončí se.</div></li>
+<li class="level1"><div class="li"> Pro generování unikátních klíčů (sdílená paměť apod.) použijte funkci ftok.</div>
+<li class="level1"><div class="li"> C funkce: fork, wait, shmget, shmat, semget, semctl, sem_open, ...</div>
+</ul>
+</p>
+
+
+<p>
+<strong>Ukázka spuštění programu:</strong>
+</p>
+<pre class="code">$ ./barbers 10 500 1000 20 barbers.out
+</pre>
+10 židlí v čekárně, zákazníci se generují náhodně v intervalu 0 až 500 ms, doba obsluhy zákazníka je 0 až 1000 ms a počet celkově vygenerovaných a obsloužených zákazníků je 20. Informace se budou ukládat do souboru barbres.out.
+</p>
+<p><br></p>
+</p>
+<pre class="code">$ ./barbers 20 200 800 20 -
+</pre>
+20 židlí v čekárně, zákazníci se generují náhodně v intervalu 0 až 200 ms, doba obsluhy zákazníka je 0 až 800 ms a počet celkově vygenerovaných a obsloužených zákazníků je 20. Informace se budou vypisovat na standardní výstup.
+</p>
+
+<p><br></p>
+
+<p>
+<strong>Ukázka výstupu programu:</strong>
+</p>
+<pre class="code">$ ./barbers 10 0 0 1 -
+</pre>
+<pre>
+1: barber: checks
+2: customer 1: created
+3: customer 1: enters
+4: barber: ready
+5: customer 1: ready
+6: barber: finished
+7: customer 1: served
+</pre>
+</p>
+
+<p>Pořadí se může lišit v závislosti na časování, ve výše ovedeném příkladu může být např. prohozen první a druhý řádek (samozřejmě se správným
+číslováním akcí), pokud proces holiče bude plánován později než proces zákazníka. 
+V rámci jednoho procesu musí být zachováno správné pořadí, např. pro zákazníka jsou možné dvě korektní sekvence:
+<pre>created
+enters
+ready
+served</pre>
+nebo
+<pre>created
+enters
+refused</pre>
+</p>
+
+Také musí být zachováno korektní pořadí akcí mezi procesy, např. 
+<ul>
+<li class="level1"><div class="li">barber ready bude vždy před customer ready,</div></li>  
+<li class="level1"><div class="li">barber finished bude vždy před customer <font color="red"><del>finished</del> served</font>,</div></li> 
+<li class="level1"><div class="li">mezi barber ready a barber finished může být právě jeden customer ready,</div></li> 
+<li class="level1"><div class="li">...</div></li> 
+</ul>
+
+
+<!--
+<p>
+<strong>Použití programu:</strong>
+
+</p>
+<pre class="code">$ ./findproc N
+findproc prints PID of every process that conforms to specific criteria
+usage: findproc criterion1 [criterion2 [...]]
+criteria:
+    -n regexp      the process name matches regexp
+    -a regexp      an argument of a process matches regexp
+    -c regexp      the current working directory matches regexp
+    -x file        the process executable file is the same as file
+</pre>
+-->
+
+</div>
+
+<br><hr><br>
+
+</body></html>
+

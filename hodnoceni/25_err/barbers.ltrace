@@ -1,0 +1,202 @@
+26693 __libc_start_main(0x401d92, 6, 0x7fffe46285d8, 0x402110, 0x4021a0 <unfinished ...>
+26693 __errno_location()                         = 0x7f5f6afa16a0
+26693 strtoul(0x7fffe462a631, 0x7fffe4628450, 10, 0x7fffe4628450, 0x32535965e0) = 10
+26693 __errno_location()                         = 0x7f5f6afa16a0
+26693 __errno_location()                         = 0x7f5f6afa16a0
+26693 __errno_location()                         = 0x7f5f6afa16a0
+26693 strtoul(0x7fffe462a634, 0x7fffe4628450, 10, 0x7fffe4628450, 0x32535956a0) = 1
+26693 __errno_location()                         = 0x7f5f6afa16a0
+26693 __errno_location()                         = 0x7f5f6afa16a0
+26693 __errno_location()                         = 0x7f5f6afa16a0
+26693 strtoul(0x7fffe462a636, 0x7fffe4628450, 10, 0x7fffe4628450, 0x32535956a0) = 1
+26693 __errno_location()                         = 0x7f5f6afa16a0
+26693 __errno_location()                         = 0x7f5f6afa16a0
+26693 __errno_location()                         = 0x7f5f6afa16a0
+26693 strtoul(0x7fffe462a638, 0x7fffe4628450, 10, 0x7fffe4628450, 0x32535956a0) = 1
+26693 __errno_location()                         = 0x7f5f6afa16a0
+26693 __errno_location()                         = 0x7f5f6afa16a0
+26693 calloc(2, 4)                               = 0xb3e010
+26693 __errno_location()                         = 0x7f5f6afa16a0
+26693 ftok(0x7fffe462a627, 97, 0x7fffe46284c0, 158, 8) = 0x6102a262
+26693 shmget(0x6102a262, 4, 1920, -1, 8)         = 0x1ff8012
+26693 ftok(0x7fffe462a627, 98, 0x7fffe4628460, -1, 8) = 0x6202a262
+26693 shmget(0x6202a262, 1, 1920, -1, 8)         = 0x2000016
+26693 ftok(0x7fffe462a627, 100, 0x7fffe4628460, -1, 8) = 0x6402a262
+26693 shmget(0x6402a262, 24, 1920, -1, 8)        = 0x2008017
+26693 ftok(0x7fffe462a627, 99, 0x7fffe4628460, -1, 8) = 0x6302a262
+26693 shmget(0x6302a262, 40, 1920, -1, 8)        = 0x2010018
+26693 __errno_location()                         = 0x7f5f6afa16a0
+26693 shmat(0x2008017, 0, 0, -1, 8)              = 0x7f5f6afd1000
+26693 __errno_location()                         = 0x7f5f6afa16a0
+26693 shmdt(0x7f5f6afd1000, 0, 10, -1, 8)        = 0
+26693 ftok(0x7fffe462a627, 122, 10, -1, 8)       = 0x7a02a262
+26693 semget(0x7a02a262, 1, 1920, -1, 8)         = 0x158001
+26693 semctl(0x158001, 0, 17, 0x7fffe4628450, 8) = 0
+26693 sigfillset(0x7fffe46283c0)                 = 0
+26693 sigaction(10, 0x7fffe4628320, NULL)        = 0
+26693 sigaction(12, 0x7fffe4628320, NULL)        = 0
+26693 getpid()                                   = 26693
+26693 srand(26693, 0x7fffe4628260, 0, -1, 0)     = 0
+26693 fwrite("HOWK\n", 1, 5, 0x32535959a0)       = 5
+26693 rand(0xffffffff, 0x402200, 5, -1, 0x402271) = 0x5aa20e11
+26693 usleep(0)                                  = <void>
+26693 fork()                                     = 26694
+26694 getpid( <unfinished ...>
+26693 fwrite("HOWK\n", 1, 5, 0x32535959a0 <unfinished ...>
+26694 <... getpid resumed> )                     = 26694
+26694 srand(26694, 0x7fffe46284c0, 26694, 0x32535971c0, 0 <unfinished ...>
+26693 <... fwrite resumed> )                     = 5
+26694 <... srand resumed> )                      = 0
+26693 rand(0xffffffff, 0x402200, 5, -1, 0x402271 <unfinished ...>
+26694 semop(0x158001, 0x7fffe46282b0, 1, 0x7fffe46282b0, 0x32535950fc <unfinished ...>
+26693 <... rand resumed> )                       = 0x1a72a88d
+26693 usleep(0 <unfinished ...>
+26694 <... semop resumed> )                      = 0
+26694 shmat(0x1ff8012, 0, 0, -1, 0x32535950fc)   = 0x7f5f6afd1000
+26693 <... usleep resumed> )                     = <void>
+26694 fprintf(0x32535958c0, "%d: barber: %s\n", 1, "checks" <unfinished ...>
+26693 fork( <unfinished ...>
+26695 semop(0x158001, 0x7fffe46282a0, 1, 0x7fffe46282a0, 0 <unfinished ...>
+26694 <... fprintf resumed> )                    = 18
+26694 shmdt(0x7f5f6afd1000, 10, 0x3253597130, 0x402219, 1 <unfinished ...>
+26693 <... fork resumed> )                       = 26695
+26693 waitpid(26695, NULL, 0 <unfinished ...>
+26694 <... shmdt resumed> )                      = 0
+26694 shmat(0x2000016, 0, 0, 0x7fffe46282e0, 1)  = 0x7f5f6afd1000
+26694 shmat(0x2008017, 0, 0, -1, 1)              = 0x7f5f6afcf000
+26694 shmat(0x2010018, 0, 0, -1, 1)              = 0x7f5f6afce000
+26694 shmdt(0x7f5f6afce000, 0x7f5f6afd1000, 0x7f5f6afd1000, -1, 1) = 0
+26694 shmdt(0x7f5f6afcf000, 0x7f5f6afd1000, 0x7f5f6afd1000, -1, 1) = 0
+26694 shmdt(0x7f5f6afd1000, 0x7f5f6afd1000, 0x7f5f6afd1000, -1, 1) = 0
+26694 sigemptyset(0x7fffe4628240)                = 0
+26694 sigemptyset(0x7fffe46281c0)                = 0
+26694 sigaddset(0x7fffe4628240, 12)              = 0
+26694 sigprocmask(0, 0x7fffe4628240, 0x7fffe46281c0) = 0
+26694 semop(0x158001, 0x7fffe4628190, 1, 0x7fffe4628190, 1 <unfinished ...>
+26695 <... semop resumed> )                      = 0
+26695 shmat(0x1ff8012, 0, 0, -1, 0 <unfinished ...>
+26694 <... semop resumed> )                      = 0
+26694 sigsuspend(0x7fffe46281c0 <unfinished ...>
+26695 <... shmat resumed> )                      = 0x7f5f6afd1000
+26695 fprintf(0x32535958c0, "%d: customer %d: %s\n", 2, 1, "created") = 23
+26695 shmdt(0x7f5f6afd1000, 10, 0x3253597130, 0x40222e, 1) = 0
+26695 semop(0x158001, 0x7fffe46282a0, 1, 0x7fffe46282a0, 1) = 0
+26695 semop(0x158001, 0x7fffe46282a0, 1, 0x7fffe46282a0, 1) = 0
+26695 shmat(0x2000016, 0, 0, 0x7fffe46282e8, 1)  = 0x7f5f6afd1000
+26695 shmat(0x2008017, 0, 0, -1, 1)              = 0x7f5f6afcf000
+26695 shmat(0x2010018, 0, 0, -1, 1)              = 0x7f5f6afce000
+26695 getpid()                                   = 26695
+26695 shmat(0x1ff8012, 0, 0, -1, 1)              = 0x7f5f6afcd000
+26695 fprintf(0x32535958c0, "%d: customer %d: %s\n", 3, 1, "enters") = 22
+26695 shmdt(0x7f5f6afcd000, 10, 0x3253597130, 0x40222e, 1) = 0
+26695 kill(26694, 12)                            = 0
+26694 --- SIGUSR2 (User defined signal 2) ---
+26695 shmdt(0x7f5f6afce000, 0x7f5f6afd1000, 0x7f5f6afd1000, -1, 1 <unfinished ...>
+26694 <... sigsuspend resumed> )                 = -1
+26694 sigprocmask(1, 0x7fffe4628240, NULL <unfinished ...>
+26695 <... shmdt resumed> )                      = 0
+26695 shmdt(0x7f5f6afcf000, 0x7f5f6afd1000, 0x7f5f6afd1000, -1, 1 <unfinished ...>
+26694 <... sigprocmask resumed> )                = 0
+26694 semop(0x158001, 0x7fffe46282b0, 1, 0x7fffe46282b0, 1 <unfinished ...>
+26695 <... shmdt resumed> )                      = 0
+26695 shmdt(0x7f5f6afd1000, 0x7f5f6afd1000, 0x7f5f6afd1000, -1, 1) = 0
+26695 sigemptyset(0x7fffe4628230)                = 0
+26695 sigemptyset(0x7fffe46281b0)                = 0
+26695 sigaddset(0x7fffe4628230, 10)              = 0
+26695 sigprocmask(0, 0x7fffe4628230, 0x7fffe46281b0) = 0
+26695 semop(0x158001, 0x7fffe4628180, 1, 0x7fffe4628180, 1) = 0
+26694 <... semop resumed> )                      = 0
+26695 sigsuspend(0x7fffe46281b0 <unfinished ...>
+26694 shmat(0x2000016, 0, 0, 0x7fffe46282e0, 1)  = 0x7f5f6afd1000
+26694 shmat(0x2008017, 0, 0, -1, 1)              = 0x7f5f6afcf000
+26694 shmat(0x2010018, 0, 0, -1, 1)              = 0x7f5f6afce000
+26694 shmdt(0x7f5f6afce000, 0x7f5f6afd1000, 0x7f5f6afd1000, -1, 1) = 0
+26694 shmdt(0x7f5f6afcf000, 0x7f5f6afd1000, 0x7f5f6afd1000, -1, 1) = 0
+26694 shmdt(0x7f5f6afd1000, 0x7f5f6afd1000, 0x7f5f6afd1000, -1, 1) = 0
+26694 shmat(0x1ff8012, 0, 0, -1, 1)              = 0x7f5f6afd1000
+26694 fprintf(0x32535958c0, "%d: barber: %s\n", 4, "ready") = 17
+26694 shmdt(0x7f5f6afd1000, 10, 0x3253597130, 0x402219, 1) = 0
+26694 sigemptyset(0x7fffe4628240)                = 0
+26694 sigemptyset(0x7fffe46281c0)                = 0
+26694 sigaddset(0x7fffe4628240, 12)              = 0
+26694 sigprocmask(0, 0x7fffe4628240, 0x7fffe46281c0) = 0
+26694 kill(26695, 10 <unfinished ...>
+26695 --- SIGUSR1 (User defined signal 1) ---
+26694 <... kill resumed> )                       = 0
+26694 semop(0x158001, 0x7fffe4628190, 1, 0x7fffe4628190, 1 <unfinished ...>
+26695 <... sigsuspend resumed> )                 = -1
+26695 sigprocmask(1, 0x7fffe4628230, NULL <unfinished ...>
+26694 <... semop resumed> )                      = 0
+26694 sigsuspend(0x7fffe46281c0 <unfinished ...>
+26695 <... sigprocmask resumed> )                = 0
+26695 semop(0x158001, 0x7fffe46282a0, 1, 0x7fffe46282a0, 1) = 0
+26695 shmat(0x1ff8012, 0, 0, -1, 1)              = 0x7f5f6afd1000
+26695 fprintf(0x32535958c0, "%d: customer %d: %s\n", 5, 1, "ready") = 21
+26695 shmdt(0x7f5f6afd1000, 10, 0x3253597130, 0x40222e, 1) = 0
+26695 sigemptyset(0x7fffe4628230)                = 0
+26695 sigemptyset(0x7fffe46281b0)                = 0
+26695 sigaddset(0x7fffe4628230, 10)              = 0
+26695 sigprocmask(0, 0x7fffe4628230, 0x7fffe46281b0) = 0
+26695 kill(26694, 12)                            = 0
+26694 --- SIGUSR2 (User defined signal 2) ---
+26695 semop(0x158001, 0x7fffe4628180, 1, 0x7fffe4628180, 1 <unfinished ...>
+26694 <... sigsuspend resumed> )                 = -1
+26694 sigprocmask(1, 0x7fffe4628240, NULL <unfinished ...>
+26695 <... semop resumed> )                      = 0
+26695 sigsuspend(0x7fffe46281b0 <unfinished ...>
+26694 <... sigprocmask resumed> )                = 0
+26694 rand(1, 0x7fffe4628240, 0, -1, 1)          = 0x48b5082b
+26694 usleep(0)                                  = <void>
+26694 semop(0x158001, 0x7fffe46282b0, 1, 0x7fffe46282b0, 0x3253595084) = 0
+26694 shmat(0x1ff8012, 0, 0, -1, 0x3253595084)   = 0x7f5f6afd1000
+26694 fprintf(0x32535958c0, "%d: barber: %s\n", 6, "finished") = 20
+26694 shmdt(0x7f5f6afd1000, 10, 0x3253597130, 0x402219, 1) = 0
+26694 semop(0x158001, 0x7fffe46282b0, 1, 0x7fffe46282b0, 1) = 0
+26694 kill(26695, 10 <unfinished ...>
+26695 --- SIGUSR1 (User defined signal 1) ---
+26694 <... kill resumed> )                       = 0
+26694 semop(0x158001, 0x7fffe46282b0, 1, 0x7fffe46282b0, 1 <unfinished ...>
+26695 <... sigsuspend resumed> )                 = -1
+26695 sigprocmask(1, 0x7fffe4628230, NULL <unfinished ...>
+26694 <... semop resumed> )                      = 0
+26694 shmat(0x1ff8012, 0, 0, -1, 1 <unfinished ...>
+26695 <... sigprocmask resumed> )                = 0
+26695 semop(0x158001, 0x7fffe46282a0, 1, 0x7fffe46282a0, 1 <unfinished ...>
+26694 <... shmat resumed> )                      = 0x7f5f6afd1000
+26694 fprintf(0x32535958c0, "%d: barber: %s\n", 7, "checks") = 18
+26694 shmdt(0x7f5f6afd1000, 10, 0x3253597130, 0x402219, 1) = 0
+26694 shmat(0x2000016, 0, 0, 0x7fffe46282e0, 1)  = 0x7f5f6afd1000
+26694 shmat(0x2008017, 0, 0, -1, 1)              = 0x7f5f6afcf000
+26694 shmat(0x2010018, 0, 0, -1, 1)              = 0x7f5f6afce000
+26694 shmdt(0x7f5f6afce000, 0x7f5f6afd1000, 0x7f5f6afd1000, -1, 1) = 0
+26694 shmdt(0x7f5f6afcf000, 0x7f5f6afd1000, 0x7f5f6afd1000, -1, 1) = 0
+26694 shmdt(0x7f5f6afd1000, 0x7f5f6afd1000, 0x7f5f6afd1000, -1, 1) = 0
+26694 sigemptyset(0x7fffe4628240)                = 0
+26694 sigemptyset(0x7fffe46281c0)                = 0
+26694 sigaddset(0x7fffe4628240, 12)              = 0
+26694 sigprocmask(0, 0x7fffe4628240, 0x7fffe46281c0) = 0
+26694 semop(0x158001, 0x7fffe4628190, 1, 0x7fffe4628190, 1 <unfinished ...>
+26695 <... semop resumed> )                      = 0
+26695 shmat(0x1ff8012, 0, 0, -1, 1 <unfinished ...>
+26694 <... semop resumed> )                      = 0
+26694 sigsuspend(0x7fffe46281c0 <unfinished ...>
+26695 <... shmat resumed> )                      = 0x7f5f6afd1000
+26695 fprintf(0x32535958c0, "%d: customer %d: %s\n", 8, 1, "served") = 22
+26695 shmdt(0x7f5f6afd1000, 10, 0x3253597130, 0x40222e, 1) = 0
+26695 semop(0x158001, 0x7fffe46282a0, 1, 0x7fffe46282a0, 1) = 0
+26695 free(0xb3e010)                             = <void>
+26695 exit(0 <unfinished ...>
+26695 +++ exited (status 0) +++
+26693 --- SIGCHLD (Child exited) ---
+26693 <... waitpid resumed> )                    = 26695
+26693 kill(26694, 9)                             = 0
+26694 +++ killed by SIGKILL +++
+26693 waitpid(26694, NULL, 0 <unfinished ...>
+26693 --- SIGCHLD (Child exited) ---
+26693 semctl(0x207616, 1, 0, 0x7fffe4628450, 0)  = -1
+26693 shmctl(0x2010018, 0, 0, -128, 0)           = 0
+26693 shmctl(0x2008017, 0, 0, -1, 0)             = 0
+26693 shmctl(0x2000016, 0, 0, -1, 0)             = 0
+26693 shmctl(0x1ff8012, 0, 0, -1, 0)             = 0
+26693 free(0xb3e010)                             = <void>
+26693 +++ exited (status 0) +++

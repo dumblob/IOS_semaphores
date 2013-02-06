@@ -1,0 +1,241 @@
+diff -Naur xpacne00//projekt2.c xpacne00.new//projekt2.c
+--- xpacne00//projekt2.c	2011-05-16 18:02:16.211217333 +0200
++++ xpacne00.new//projekt2.c	2011-05-16 18:02:16.211217333 +0200
+@@ -136,15 +136,33 @@
+  * @parma pointer to the global action counter
+  * @return nothing
+  */
+-void shout(FILE *fw, const char *str, const int id, int *action_no)
++int shout(const t_arg *args, const char *str, const int id, int *action_no)
+ {
++  FILE *fw = NULL;
++
++  /* we use NULL as idicator of stdout */
++  if (args->file == NULL)
++  {
++    fw = stdout;
++  }
++  else
++  {
++    /* open file for writing */
++    if ((fw = fopen(args->file, "a")) == NULL)
++    {
++      printErr(ERR_FILE_WRITE, args->file);
++      return ERR_FILE_WRITE;
++    }
++  }
++
+   if (id == 0)
+-    fprintf((fw == NULL) ? stdout : fw,"%d: barber: %s\n",
+-            ++(*action_no), str);
++    fprintf(fw,"%d: barber: %s\n",      ++(*action_no), str);
+   else
+-    fprintf((fw == NULL) ? stdout : fw,"%d: customer %d: %s\n",
+-            ++(*action_no), id, str);
+-  return;
++    fprintf(fw,"%d: customer %d: %s\n", ++(*action_no), id, str);
++
++  if (fw != stdout) fclose(fw);
++
++  return 0;
+ }
+ 
+ /*
+@@ -274,7 +292,7 @@
+  * @param structure with parsed arguments
+  * return nothing
+  */
+-void process_barber(FILE *fw, const struct st_shmid *shmid, const t_arg *args)
++void process_barber(const struct st_shmid *shmid, const t_arg *args)
+ {
+   pid_t pid = 0;
+   int *action_no = NULL;
+@@ -292,7 +310,7 @@
+     /* attach needed shm segments */
+     action_no = (int *)shmat(shmid->action_no, NULL, 0);
+ 
+-    shout(fw, "checks", 0, action_no);
++    shout(args, "checks", 0, action_no);
+ 
+     /* detach needed shm segments */
+     shmdt((void *)action_no);
+@@ -320,7 +338,7 @@
+     shmdet_record_barber_sleeps(record, barber_sleeps);
+ 
+     action_no = (int *)shmat(shmid->action_no, NULL, 0);
+-    shout(fw, "ready", 0, action_no);
++    shout(args, "ready", 0, action_no);
+     shmdt((void *)action_no);
+ 
+     /* inform customer I'm ready and wait for answer */
+@@ -331,7 +349,7 @@
+ 
+     lock();
+     action_no = (int *)shmat(shmid->action_no, NULL, 0);
+-    shout(fw, "finished", 0, action_no);
++    shout(args, "finished", 0, action_no);
+     shmdt((void *)action_no);
+     unlock();
+ 
+@@ -339,8 +357,7 @@
+     kill(pid, SIGUSR1);
+   } /* for(;;) */
+ 
+-  /* exit child */
+-  exit(0);
++  return;
+ }
+ 
+ /*
+@@ -351,7 +368,7 @@
+  * @param id of current process (customer)
+  * @return nothing
+  */
+-void process_customer(FILE *fw, const struct st_shmid *shmid,
++void process_customer(const struct st_shmid *shmid, const t_arg *args,
+   const pid_t barber_pid, const int id)
+ {
+   int *action_no = NULL;
+@@ -360,7 +377,7 @@
+ 
+   lock();
+   action_no = (int *)shmat(shmid->action_no, NULL, 0);
+-  shout(fw, "created", id, action_no);
++  shout(args, "created", id, action_no);
+   shmdt((void *)action_no);
+   unlock();
+ 
+@@ -370,7 +387,7 @@
+   if (queue_st(record, getpid()) == true)
+   {
+     action_no = (int *)shmat(shmid->action_no, NULL, 0);
+-    shout(fw, "enters", id, action_no);
++    shout(args, "enters", id, action_no);
+     shmdt((void *)action_no);
+ 
+     if (*barber_sleeps == true)
+@@ -388,7 +405,7 @@
+ 
+     lock();
+     action_no = (int *)shmat(shmid->action_no, NULL, 0);
+-    shout(fw, "ready", id, action_no);
++    shout(args, "ready", id, action_no);
+     shmdt((void *)action_no);
+ 
+     /* inform barber, I'm ready and wait until I'm cut */
+@@ -396,22 +413,21 @@
+ 
+     lock();
+     action_no = (int *)shmat(shmid->action_no, NULL, 0);
+-    shout(fw, "served", id, action_no);
++    shout(args, "served", id, action_no);
+     shmdt((void *)action_no);
+     unlock();
+   }
+   else
+   {
+     action_no = (int *)shmat(shmid->action_no, NULL, 0);
+-    shout(fw, "refused", id, action_no);
++    shout(args, "refused", id, action_no);
+     shmdt((void *)action_no);
+ 
+     shmdet_record_barber_sleeps(record, barber_sleeps);
+     unlock();
+   }
+ 
+-  /* exit child */
+-  exit(0);
++  return;
+ }
+ 
+ /*
+@@ -421,10 +437,10 @@
+  */
+ void ungetshm(struct st_shmid *shmid)
+ {
+-  if (shmid->record != -1) shmctl(shmid->buf,           IPC_RMID, NULL);
+-  if (shmid->record != -1) shmctl(shmid->record,        IPC_RMID, NULL);
+-  if (shmid->record != -1) shmctl(shmid->barber_sleeps, IPC_RMID, NULL);
+-  if (shmid->record != -1) shmctl(shmid->action_no,     IPC_RMID, NULL);
++  if (shmid->buf           != -1) shmctl(shmid->buf,           IPC_RMID, NULL);
++  if (shmid->record        != -1) shmctl(shmid->record,        IPC_RMID, NULL);
++  if (shmid->barber_sleeps != -1) shmctl(shmid->barber_sleeps, IPC_RMID, NULL);
++  if (shmid->action_no     != -1) shmctl(shmid->action_no,     IPC_RMID, NULL);
+ 
+   return;
+ }
+@@ -495,7 +511,6 @@
+ int general(const t_arg *args)
+ {
+   t_err err = ERR_OK;
+-  FILE *fw = NULL;
+   pid_t *pid = NULL;      /* array with PIDs */
+   struct st_shmid shmid;  /* struct with shared memory segments */
+ 
+@@ -513,19 +528,6 @@
+     return err;
+   }
+ 
+-  /* we use NULL as idicator of stdout */
+-  if (args->file != NULL)
+-  {
+-    /* open file for writing */
+-    if ((fw = fopen(args->file, "w")) == NULL)
+-    {
+-      ungetshm(&shmid);
+-      free(pid);
+-      printErr(ERR_FILE_WRITE, args->file);
+-      return ERR_FILE_WRITE;
+-    }
+-  }
+-
+   /* reset errno */
+   errno = 0;
+ 
+@@ -534,7 +536,6 @@
+ 
+   if (errno)
+   {
+-    if (fw != NULL) fclose(fw);
+     shmdt((void *)record);
+     ungetshm(&shmid);
+     free(pid);
+@@ -553,7 +554,6 @@
+   if ((semid = semget(ftok(args->path, 'z'), 1,
+                       IPC_CREAT | IPC_EXCL | 0600)) == -1)
+   {
+-    if (fw != NULL) fclose(fw);
+     shmdt((void *)record);
+     ungetshm(&shmid);
+     free(pid);
+@@ -603,9 +603,17 @@
+     if ((pid[i] = fork()) == 0)
+     {
+       if (i == 0)
+-        process_barber(fw, &shmid, args);
++      {
++        process_barber(&shmid, args);
++        free(pid);
++        exit(0); /* exit child */
++      }
+       else
+-        process_customer(fw, &shmid, pid[0], i);
++      {
++        process_customer(&shmid, args, pid[0], i);
++        free(pid);
++        exit(0); /* exit child */
++      }
+     }
+     /* something bad happened */
+     else if (pid[i] == -1)
+@@ -640,10 +648,6 @@
+   /* deallocate pid array */
+   free(pid);
+ 
+-  /* close file if any */
+-  if (fw != NULL)
+-    if (fclose(fw) == EOF) printErr(err = ERR_FILE_CLOSE, args->file);
+-
+   return err;  /* exit parent */
+ }
+ 

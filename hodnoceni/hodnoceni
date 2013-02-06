@@ -1,0 +1,36 @@
+15:kompenzace chyba ve sleep
+0.5:kompenzace
+#-- hodnoceni jednotlivych testu ----------------------
+= test barber_make
+gcc -std=gnu99 -W -Wall -Wextra -Werror -pedantic  -c projekt2.c
+gcc -std=gnu99 -W -Wall -Wextra -Werror -pedantic  -c args.c
+gcc -std=gnu99 -W -Wall -Wextra -Werror -pedantic  -O2 -o barbers projekt2.o args.o
+: make OK
+= test 02_base (vystup do souboru)
+1.0: counter ok
+0.5: chovani barber ok, posledni vypis je checks
+1.5: chovani customer ok
+1.5: sekvence barber ready - customer ready ok
+1.5: sekvence barber ready - customer ready - barber finished - customer served ok
+= test 03_base2 (vystup na std. vystup)
+0: vystup neni korektni
+= test 04_base3 (vystup do souboru)
+0.5: counter ok
+0.2: chovani barber ok, posledni vypis je checks
+0.5: chovani customer ok
+0.5: sekvence barber ready - customer ready ok
+0.0: sekvence barber ready - customer ready - barber finished - customer served chybne
+= test 10_refused
+0.0: test refused chybne
+= test resources
+: pocet volani wait -> 3
+: odstraneni sdilene pameti OK
+: odstraneni semaforu OK
+= test 24_sleep
+-15: podezrely pocet volani sleep (5) (*** overit ***)
+= test 25_err
+: zpracovani chyby pri alokaci sdilene pameti -> perror nepouzit
+: zpracovani chyby pri alokaci sdilene pameti -> navratovy kod je 12 (OK)
+#------------------------------------------------------
+8:celkove score
+8:celkem bodu za projekt

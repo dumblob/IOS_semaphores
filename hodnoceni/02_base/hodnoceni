@@ -1,0 +1,6 @@
+= test 02_base (vystup do souboru)
+1.0: counter ok
+0.5: chovani barber ok, posledni vypis je checks
+1.5: chovani customer ok
+1.5: sekvence barber ready - customer ready ok
+1.5: sekvence barber ready - customer ready - barber finished - customer served ok

@@ -1,0 +1,8 @@
+1: barber: checks
+2: customer 1: created
+3: customer 1: enters
+4: barber: ready
+5: customer 1: ready
+6: barber: finished
+7: barber: checks
+8: customer 1: served

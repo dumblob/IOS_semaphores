@@ -1,0 +1,1 @@
+'sh' 'run.sh' <stdin >stdout 2>stderr

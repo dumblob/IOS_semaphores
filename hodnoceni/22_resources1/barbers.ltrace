@@ -1,0 +1,332 @@
+26542 __libc_start_main(0x401d92, 6, 0x7fffff765598, 0x402110, 0x4021a0 <unfinished ...>
+26542 __errno_location()                         = 0x7f51d6a226a0
+26542 strtoul(0x7fffff76665b, 0x7fffff765410, 10, 0x7fffff765410, 0x32535965e0) = 10
+26542 __errno_location()                         = 0x7f51d6a226a0
+26542 __errno_location()                         = 0x7f51d6a226a0
+26542 __errno_location()                         = 0x7f51d6a226a0
+26542 strtoul(0x7fffff76665e, 0x7fffff765410, 10, 0x7fffff765410, 0x32535956a0) = 1
+26542 __errno_location()                         = 0x7f51d6a226a0
+26542 __errno_location()                         = 0x7f51d6a226a0
+26542 __errno_location()                         = 0x7f51d6a226a0
+26542 strtoul(0x7fffff766660, 0x7fffff765410, 10, 0x7fffff765410, 0x32535956a0) = 1
+26542 __errno_location()                         = 0x7f51d6a226a0
+26542 __errno_location()                         = 0x7f51d6a226a0
+26542 __errno_location()                         = 0x7f51d6a226a0
+26542 strtoul(0x7fffff766662, 0x7fffff765410, 10, 0x7fffff765410, 0x32535956a0) = 2
+26542 __errno_location()                         = 0x7f51d6a226a0
+26542 __errno_location()                         = 0x7f51d6a226a0
+26542 calloc(3, 4)                               = 0x157c010
+26542 __errno_location()                         = 0x7f51d6a226a0
+26542 ftok(0x7fffff766651, 97, 0x7fffff765480, 410, 12) = 0x6102a246
+26542 shmget(0x6102a246, 4, 1920, -1, 12)        = 0x1f98012
+26542 ftok(0x7fffff766651, 98, 0x7fffff765420, -1, 12) = 0x6202a246
+26542 shmget(0x6202a246, 1, 1920, -1, 12)        = 0x1fa0016
+26542 ftok(0x7fffff766651, 100, 0x7fffff765420, -1, 12) = 0x6402a246
+26542 shmget(0x6402a246, 24, 1920, -1, 12)       = 0x1fa8017
+26542 ftok(0x7fffff766651, 99, 0x7fffff765420, -1, 12) = 0x6302a246
+26542 shmget(0x6302a246, 40, 1920, -1, 12)       = 0x1fb0018
+26542 __errno_location()                         = 0x7f51d6a226a0
+26542 shmat(0x1fa8017, 0, 0, -1, 12)             = 0x7f51d6a52000
+26542 __errno_location()                         = 0x7f51d6a226a0
+26542 shmdt(0x7f51d6a52000, 0, 10, -1, 12)       = 0
+26542 ftok(0x7fffff766651, 122, 10, -1, 12)      = 0x7a02a246
+26542 semget(0x7a02a246, 1, 1920, -1, 12)        = 0x140001
+26542 semctl(0x140001, 0, 17, 0x7fffff765410, 12) = 0
+26542 sigfillset(0x7fffff765380)                 = 0
+26542 sigaction(10, 0x7fffff7652e0, NULL)        = 0
+26542 sigaction(12, 0x7fffff7652e0, NULL)        = 0
+26542 getpid()                                   = 26542
+26542 srand(26542, 0x7fffff765220, 0, -1, 0)     = 0
+26542 fwrite("HOWK\n", 1, 5, 0x32535959a0)       = 5
+26542 rand(0xffffffff, 0x402200, 5, -1, 0x402271) = 0xbdb3dd9
+26542 usleep(0)                                  = <void>
+26542 fork()                                     = 26543
+26542 fwrite("HOWK\n", 1, 5, 0x32535959a0)       = 5
+26542 rand(0xffffffff, 0x402200, 5, -1, 0x402271) = 0x6a959e38
+26542 usleep(0)                                  = <void>
+26542 fork()                                     = 26544
+26542 fwrite("HOWK\n", 1, 5, 0x32535959a0)       = 5
+26542 rand(0xffffffff, 0x402200, 5, -1, 0x402271) = 0x2d9c3ec7
+26542 usleep(0 <unfinished ...>
+26543 getpid( <unfinished ...>
+26542 <... usleep resumed> )                     = <void>
+26543 <... getpid resumed> )                     = 26543
+26542 fork( <unfinished ...>
+26543 srand(26543, 0x7fffff765480, 26543, 0x32535971c0, 0) = 0
+26543 semop(0x140001, 0x7fffff765270, 1, 0x7fffff765270, 0x32535950fc <unfinished ...>
+26542 <... fork resumed> )                       = 26545
+26542 waitpid(26544, NULL, 0 <unfinished ...>
+26543 <... semop resumed> )                      = 0
+26543 shmat(0x1f98012, 0, 0, -1, 0x32535950fc)   = 0x7f51d6a52000
+26543 fopen("barbers.out", "a")                  = 0x157c030
+26543 fprintf(0x157c030, "%d: barber: %s\n", 1, "checks") = 18
+26543 fclose(0x157c030)                          = 0
+26543 shmdt(0x7f51d6a52000, 0, 134560, 134560, 0x7f51d6a22720) = 0
+26543 shmat(0x1fa0016, 0, 0, 0x7fffff7652a0, 0x7f51d6a22720) = 0x7f51d6a52000
+26543 shmat(0x1fa8017, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a51000
+26543 shmat(0x1fb0018, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a50000
+26543 shmdt(0x7f51d6a50000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26543 shmdt(0x7f51d6a51000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26543 shmdt(0x7f51d6a52000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26543 sigemptyset(0x7fffff765200)                = 0
+26543 sigemptyset(0x7fffff765180)                = 0
+26543 sigaddset(0x7fffff765200, 12)              = 0
+26543 sigprocmask(0, 0x7fffff765200, 0x7fffff765180) = 0
+26543 semop(0x140001, 0x7fffff765150, 1, 0x7fffff765150, 0x7f51d6a22720) = 0
+26543 sigsuspend(0x7fffff765180 <unfinished ...>
+26544 semop(0x140001, 0x7fffff765260, 1, 0x7fffff765260, 0) = 0
+26544 shmat(0x1f98012, 0, 0, -1, 0)              = 0x7f51d6a52000
+26544 fopen("barbers.out", "a" <unfinished ...>
+26545 semop(0x140001, 0x7fffff765260, 1, 0x7fffff765260, 0 <unfinished ...>
+26544 <... fopen resumed> )                      = 0x157c030
+26544 fprintf(0x157c030, "%d: customer %d: %s\n", 2, 1, "created") = 23
+26544 fclose(0x157c030)                          = 0
+26544 shmdt(0x7f51d6a52000, 0, 134560, 134560, 0x7f51d6a22720) = 0
+26544 semop(0x140001, 0x7fffff765260, 1, 0x7fffff765260, 0x7f51d6a22720 <unfinished ...>
+26545 <... semop resumed> )                      = 0
+26545 shmat(0x1f98012, 0, 0, -1, 0)              = 0x7f51d6a52000
+26545 fopen("barbers.out", "a")                  = 0x157c030
+26545 fprintf(0x157c030, "%d: customer %d: %s\n", 3, 2, "created" <unfinished ...>
+26544 <... semop resumed> )                      = 0
+26544 semop(0x140001, 0x7fffff765260, 1, 0x7fffff765260, 0x7f51d6a22720 <unfinished ...>
+26545 <... fprintf resumed> )                    = 23
+26545 fclose(0x157c030)                          = 0
+26545 shmdt(0x7f51d6a52000, 0, 134560, 134560, 0x7f51d6a22720) = 0
+26545 semop(0x140001, 0x7fffff765260, 1, 0x7fffff765260, 0x7f51d6a22720) = 0
+26544 <... semop resumed> )                      = 0
+26545 semop(0x140001, 0x7fffff765260, 1, 0x7fffff765260, 0x7f51d6a22720 <unfinished ...>
+26544 shmat(0x1fa0016, 0, 0, 0x7fffff7652a8, 0x7f51d6a22720) = 0x7f51d6a52000
+26544 shmat(0x1fa8017, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a51000
+26544 shmat(0x1fb0018, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a50000
+26544 getpid()                                   = 26544
+26544 shmat(0x1f98012, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a4f000
+26544 fopen("barbers.out", "a")                  = 0x157c030
+26544 fprintf(0x157c030, "%d: customer %d: %s\n", 4, 1, "enters") = 22
+26544 fclose(0x157c030)                          = 0
+26544 shmdt(0x7f51d6a4f000, 0, 134560, 134560, 0x7f51d6a22720) = 0
+26544 kill(26543, 12)                            = 0
+26543 --- SIGUSR2 (User defined signal 2) ---
+26544 shmdt(0x7f51d6a50000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720 <unfinished ...>
+26543 <... sigsuspend resumed> )                 = -1
+26543 sigprocmask(1, 0x7fffff765200, NULL <unfinished ...>
+26544 <... shmdt resumed> )                      = 0
+26544 shmdt(0x7f51d6a51000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720 <unfinished ...>
+26543 <... sigprocmask resumed> )                = 0
+26543 semop(0x140001, 0x7fffff765270, 1, 0x7fffff765270, 0x7f51d6a22720 <unfinished ...>
+26544 <... shmdt resumed> )                      = 0
+26544 shmdt(0x7f51d6a52000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26544 sigemptyset(0x7fffff7651f0)                = 0
+26544 sigemptyset(0x7fffff765170)                = 0
+26544 sigaddset(0x7fffff7651f0, 10)              = 0
+26544 sigprocmask(0, 0x7fffff7651f0, 0x7fffff765170) = 0
+26544 semop(0x140001, 0x7fffff765140, 1, 0x7fffff765140, 0x7f51d6a22720 <unfinished ...>
+26545 <... semop resumed> )                      = 0
+26544 <... semop resumed> )                      = 0
+26545 shmat(0x1fa0016, 0, 0, 0x7fffff7652a8, 0x7f51d6a22720 <unfinished ...>
+26544 sigsuspend(0x7fffff765170 <unfinished ...>
+26545 <... shmat resumed> )                      = 0x7f51d6a52000
+26545 shmat(0x1fa8017, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a51000
+26545 shmat(0x1fb0018, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a50000
+26545 getpid()                                   = 26545
+26545 shmat(0x1f98012, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a4f000
+26545 fopen("barbers.out", "a")                  = 0x157c030
+26545 fprintf(0x157c030, "%d: customer %d: %s\n", 5, 2, "enters") = 22
+26545 fclose(0x157c030)                          = 0
+26545 shmdt(0x7f51d6a4f000, 0, 134560, 134560, 0x7f51d6a22720) = 0
+26545 shmdt(0x7f51d6a50000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26545 shmdt(0x7f51d6a51000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26545 shmdt(0x7f51d6a52000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26545 sigemptyset(0x7fffff7651f0)                = 0
+26545 sigemptyset(0x7fffff765170)                = 0
+26545 sigaddset(0x7fffff7651f0, 10)              = 0
+26545 sigprocmask(0, 0x7fffff7651f0, 0x7fffff765170) = 0
+26545 semop(0x140001, 0x7fffff765140, 1, 0x7fffff765140, 0x7f51d6a22720) = 0
+26543 <... semop resumed> )                      = 0
+26545 sigsuspend(0x7fffff765170 <unfinished ...>
+26543 shmat(0x1fa0016, 0, 0, 0x7fffff7652a0, 0x7f51d6a22720) = 0x7f51d6a52000
+26543 shmat(0x1fa8017, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a51000
+26543 shmat(0x1fb0018, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a50000
+26543 shmdt(0x7f51d6a50000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26543 shmdt(0x7f51d6a51000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26543 shmdt(0x7f51d6a52000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26543 shmat(0x1f98012, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a52000
+26543 fopen("barbers.out", "a")                  = 0x157c030
+26543 fprintf(0x157c030, "%d: barber: %s\n", 6, "ready") = 17
+26543 fclose(0x157c030)                          = 0
+26543 shmdt(0x7f51d6a52000, 0, 134560, 134560, 0x7f51d6a22720) = 0
+26543 sigemptyset(0x7fffff765200)                = 0
+26543 sigemptyset(0x7fffff765180)                = 0
+26543 sigaddset(0x7fffff765200, 12)              = 0
+26543 sigprocmask(0, 0x7fffff765200, 0x7fffff765180) = 0
+26543 kill(26544, 10 <unfinished ...>
+26544 --- SIGUSR1 (User defined signal 1) ---
+26543 <... kill resumed> )                       = 0
+26543 semop(0x140001, 0x7fffff765150, 1, 0x7fffff765150, 0x7f51d6a22720 <unfinished ...>
+26544 <... sigsuspend resumed> )                 = -1
+26544 sigprocmask(1, 0x7fffff7651f0, NULL <unfinished ...>
+26543 <... semop resumed> )                      = 0
+26543 sigsuspend(0x7fffff765180 <unfinished ...>
+26544 <... sigprocmask resumed> )                = 0
+26544 semop(0x140001, 0x7fffff765260, 1, 0x7fffff765260, 0x7f51d6a22720) = 0
+26544 shmat(0x1f98012, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a52000
+26544 fopen("barbers.out", "a")                  = 0x157c030
+26544 fprintf(0x157c030, "%d: customer %d: %s\n", 7, 1, "ready") = 21
+26544 fclose(0x157c030)                          = 0
+26544 shmdt(0x7f51d6a52000, 0, 134560, 134560, 0x7f51d6a22720) = 0
+26544 sigemptyset(0x7fffff7651f0)                = 0
+26544 sigemptyset(0x7fffff765170)                = 0
+26544 sigaddset(0x7fffff7651f0, 10)              = 0
+26544 sigprocmask(0, 0x7fffff7651f0, 0x7fffff765170) = 0
+26544 kill(26543, 12)                            = 0
+26543 --- SIGUSR2 (User defined signal 2) ---
+26544 semop(0x140001, 0x7fffff765140, 1, 0x7fffff765140, 0x7f51d6a22720 <unfinished ...>
+26543 <... sigsuspend resumed> )                 = -1
+26543 sigprocmask(1, 0x7fffff765200, NULL <unfinished ...>
+26544 <... semop resumed> )                      = 0
+26544 sigsuspend(0x7fffff765170 <unfinished ...>
+26543 <... sigprocmask resumed> )                = 0
+26543 rand(1, 0x7fffff765200, 0, -1, 0x7f51d6a22720) = 0x3a248bc9
+26543 usleep(0)                                  = <void>
+26543 semop(0x140001, 0x7fffff765270, 1, 0x7fffff765270, 0x3253595084) = 0
+26543 shmat(0x1f98012, 0, 0, -1, 0x3253595084)   = 0x7f51d6a52000
+26543 fopen("barbers.out", "a")                  = 0x157c030
+26543 fprintf(0x157c030, "%d: barber: %s\n", 8, "finished") = 20
+26543 fclose(0x157c030)                          = 0
+26543 shmdt(0x7f51d6a52000, 0, 134560, 134560, 0x7f51d6a22720) = 0
+26543 semop(0x140001, 0x7fffff765270, 1, 0x7fffff765270, 0x7f51d6a22720) = 0
+26543 kill(26544, 10 <unfinished ...>
+26544 --- SIGUSR1 (User defined signal 1) ---
+26543 <... kill resumed> )                       = 0
+26543 semop(0x140001, 0x7fffff765270, 1, 0x7fffff765270, 0x7f51d6a22720 <unfinished ...>
+26544 <... sigsuspend resumed> )                 = -1
+26544 sigprocmask(1, 0x7fffff7651f0, NULL <unfinished ...>
+26543 <... semop resumed> )                      = 0
+26543 shmat(0x1f98012, 0, 0, -1, 0x7f51d6a22720 <unfinished ...>
+26544 <... sigprocmask resumed> )                = 0
+26544 semop(0x140001, 0x7fffff765260, 1, 0x7fffff765260, 0x7f51d6a22720 <unfinished ...>
+26543 <... shmat resumed> )                      = 0x7f51d6a52000
+26543 fopen("barbers.out", "a")                  = 0x157c030
+26543 fprintf(0x157c030, "%d: barber: %s\n", 9, "checks") = 18
+26543 fclose(0x157c030)                          = 0
+26543 shmdt(0x7f51d6a52000, 0, 134560, 134560, 0x7f51d6a22720) = 0
+26543 shmat(0x1fa0016, 0, 0, 0x7fffff7652a0, 0x7f51d6a22720) = 0x7f51d6a52000
+26543 shmat(0x1fa8017, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a51000
+26543 shmat(0x1fb0018, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a50000
+26543 shmdt(0x7f51d6a50000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26543 shmdt(0x7f51d6a51000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26543 shmdt(0x7f51d6a52000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26543 shmat(0x1f98012, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a52000
+26543 fopen("barbers.out", "a")                  = 0x157c030
+26543 fprintf(0x157c030, "%d: barber: %s\n", 10, "ready") = 18
+26543 fclose(0x157c030)                          = 0
+26543 shmdt(0x7f51d6a52000, 0, 134560, 134560, 0x7f51d6a22720) = 0
+26543 sigemptyset(0x7fffff765200)                = 0
+26543 sigemptyset(0x7fffff765180)                = 0
+26543 sigaddset(0x7fffff765200, 12)              = 0
+26543 sigprocmask(0, 0x7fffff765200, 0x7fffff765180) = 0
+26543 kill(26545, 10 <unfinished ...>
+26545 --- SIGUSR1 (User defined signal 1) ---
+26543 <... kill resumed> )                       = 0
+26545 <... sigsuspend resumed> )                 = -1
+26543 semop(0x140001, 0x7fffff765150, 1, 0x7fffff765150, 0x7f51d6a22720 <unfinished ...>
+26545 sigprocmask(1, 0x7fffff7651f0, NULL <unfinished ...>
+26544 <... semop resumed> )                      = 0
+26543 <... semop resumed> )                      = 0
+26545 <... sigprocmask resumed> )                = 0
+26544 shmat(0x1f98012, 0, 0, -1, 0x7f51d6a22720 <unfinished ...>
+26543 sigsuspend(0x7fffff765180 <unfinished ...>
+26545 semop(0x140001, 0x7fffff765260, 1, 0x7fffff765260, 0x7f51d6a22720 <unfinished ...>
+26544 <... shmat resumed> )                      = 0x7f51d6a52000
+26544 fopen("barbers.out", "a")                  = 0x157c030
+26544 fprintf(0x157c030, "%d: customer %d: %s\n", 11, 1, "served") = 23
+26544 fclose(0x157c030)                          = 0
+26544 shmdt(0x7f51d6a52000, 0, 134560, 134560, 0x7f51d6a22720) = 0
+26544 semop(0x140001, 0x7fffff765260, 1, 0x7fffff765260, 0x7f51d6a22720 <unfinished ...>
+26545 <... semop resumed> )                      = 0
+26544 <... semop resumed> )                      = 0
+26545 shmat(0x1f98012, 0, 0, -1, 0x7f51d6a22720 <unfinished ...>
+26544 free(0x157c010)                            = <void>
+26544 exit(0 <unfinished ...>
+26545 <... shmat resumed> )                      = 0x7f51d6a52000
+26545 fopen("barbers.out", "a" <unfinished ...>
+26544 +++ exited (status 0) +++
+26542 --- SIGCHLD (Child exited) ---
+26542 <... waitpid resumed> )                    = 26544
+26542 waitpid(26545, NULL, 0 <unfinished ...>
+26545 <... fopen resumed> )                      = 0x157c030
+26545 fprintf(0x157c030, "%d: customer %d: %s\n", 12, 2, "ready") = 22
+26545 fclose(0x157c030)                          = 0
+26545 shmdt(0x7f51d6a52000, 0, 134560, 134560, 0x7f51d6a22720) = 0
+26545 sigemptyset(0x7fffff7651f0)                = 0
+26545 sigemptyset(0x7fffff765170)                = 0
+26545 sigaddset(0x7fffff7651f0, 10)              = 0
+26545 sigprocmask(0, 0x7fffff7651f0, 0x7fffff765170) = 0
+26545 kill(26543, 12)                            = 0
+26543 --- SIGUSR2 (User defined signal 2) ---
+26545 semop(0x140001, 0x7fffff765140, 1, 0x7fffff765140, 0x7f51d6a22720 <unfinished ...>
+26543 <... sigsuspend resumed> )                 = -1
+26543 sigprocmask(1, 0x7fffff765200, NULL <unfinished ...>
+26545 <... semop resumed> )                      = 0
+26545 sigsuspend(0x7fffff765170 <unfinished ...>
+26543 <... sigprocmask resumed> )                = 0
+26543 rand(1, 0x7fffff765200, 0, -1, 0x7f51d6a22720) = 0x5ff31f07
+26543 usleep(0)                                  = <void>
+26543 semop(0x140001, 0x7fffff765270, 1, 0x7fffff765270, 0x3253595088) = 0
+26543 shmat(0x1f98012, 0, 0, -1, 0x3253595088)   = 0x7f51d6a52000
+26543 fopen("barbers.out", "a")                  = 0x157c030
+26543 fprintf(0x157c030, "%d: barber: %s\n", 13, "finished") = 21
+26543 fclose(0x157c030)                          = 0
+26543 shmdt(0x7f51d6a52000, 0, 134560, 134560, 0x7f51d6a22720) = 0
+26543 semop(0x140001, 0x7fffff765270, 1, 0x7fffff765270, 0x7f51d6a22720) = 0
+26543 kill(26545, 10 <unfinished ...>
+26545 --- SIGUSR1 (User defined signal 1) ---
+26543 <... kill resumed> )                       = 0
+26543 semop(0x140001, 0x7fffff765270, 1, 0x7fffff765270, 0x7f51d6a22720 <unfinished ...>
+26545 <... sigsuspend resumed> )                 = -1
+26545 sigprocmask(1, 0x7fffff7651f0, NULL <unfinished ...>
+26543 <... semop resumed> )                      = 0
+26543 shmat(0x1f98012, 0, 0, -1, 0x7f51d6a22720 <unfinished ...>
+26545 <... sigprocmask resumed> )                = 0
+26545 semop(0x140001, 0x7fffff765260, 1, 0x7fffff765260, 0x7f51d6a22720 <unfinished ...>
+26543 <... shmat resumed> )                      = 0x7f51d6a52000
+26543 fopen("barbers.out", "a")                  = 0x157c030
+26543 fprintf(0x157c030, "%d: barber: %s\n", 14, "checks") = 19
+26543 fclose(0x157c030)                          = 0
+26543 shmdt(0x7f51d6a52000, 0, 134560, 134560, 0x7f51d6a22720) = 0
+26543 shmat(0x1fa0016, 0, 0, 0x7fffff7652a0, 0x7f51d6a22720) = 0x7f51d6a52000
+26543 shmat(0x1fa8017, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a51000
+26543 shmat(0x1fb0018, 0, 0, -1, 0x7f51d6a22720) = 0x7f51d6a50000
+26543 shmdt(0x7f51d6a50000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26543 shmdt(0x7f51d6a51000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26543 shmdt(0x7f51d6a52000, 0x7f51d6a52000, 0x7f51d6a52000, -1, 0x7f51d6a22720) = 0
+26543 sigemptyset(0x7fffff765200)                = 0
+26543 sigemptyset(0x7fffff765180)                = 0
+26543 sigaddset(0x7fffff765200, 12)              = 0
+26543 sigprocmask(0, 0x7fffff765200, 0x7fffff765180) = 0
+26543 semop(0x140001, 0x7fffff765150, 1, 0x7fffff765150, 0x7f51d6a22720 <unfinished ...>
+26545 <... semop resumed> )                      = 0
+26545 shmat(0x1f98012, 0, 0, -1, 0x7f51d6a22720 <unfinished ...>
+26543 <... semop resumed> )                      = 0
+26543 sigsuspend(0x7fffff765180 <unfinished ...>
+26545 <... shmat resumed> )                      = 0x7f51d6a52000
+26545 fopen("barbers.out", "a")                  = 0x157c030
+26545 fprintf(0x157c030, "%d: customer %d: %s\n", 15, 2, "served") = 23
+26545 fclose(0x157c030)                          = 0
+26545 shmdt(0x7f51d6a52000, 0, 134560, 134560, 0x7f51d6a22720) = 0
+26545 semop(0x140001, 0x7fffff765260, 1, 0x7fffff765260, 0x7f51d6a22720) = 0
+26545 free(0x157c010)                            = <void>
+26545 exit(0 <unfinished ...>
+26545 +++ exited (status 0) +++
+26542 --- SIGCHLD (Child exited) ---
+26542 <... waitpid resumed> )                    = 26545
+26542 kill(26543, 9)                             = 0
+26543 +++ killed by SIGKILL +++
+26542 waitpid(26543, NULL, 0 <unfinished ...>
+26542 --- SIGCHLD (Child exited) ---
+26542 semctl(0x20757f, 1, 0, 0x7fffff765410, 0)  = -1
+26542 shmctl(0x1fb0018, 0, 0, -128, 0)           = 0
+26542 shmctl(0x1fa8017, 0, 0, -1, 0)             = 0
+26542 shmctl(0x1fa0016, 0, 0, -1, 0)             = 0
+26542 shmctl(0x1f98012, 0, 0, -1, 0)             = 0
+26542 free(0x157c010)                            = <void>
+26542 +++ exited (status 0) +++

@@ -1,0 +1,3 @@
+= test 25_err
+: zpracovani chyby pri alokaci sdilene pameti -> perror nepouzit
+: zpracovani chyby pri alokaci sdilene pameti -> navratovy kod je 12 (OK)
